@@ -103,21 +103,19 @@ p {
   line-height: 30px;
 }
 
+.first {
+  height: 100vh;
+  @media (max-width: 800px) {
+    padding: 0;
+    height: 100vh;
+  }
+}
+
 section {
   position: relative;
   height: 100vh;
-  @media (max-width: 650px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  @media (max-width: 460px) {
-    img {
-      width: 200px;
-      display: flex;
-      justify-content: center;
-    }
+  @media (max-width: 655px) {
+    height: auto;
   }
 }
 
@@ -132,7 +130,23 @@ section {
 
 }
 
+.ex-image {
+  width: 600px;
+  display: block;
+  object-fit: contain;
+  margin: 50px 0;
+  @media (max-width: 700px) {
+    width: 400px;
+  }
+  @media (max-width: 500px) {
+    width: 250px;
+  }
+}
+
 main {
+  @media (max-width: 500px) {
+    padding: 0;
+  }
   padding: 30px 0 30px 0;
   position: relative;
   z-index: 1;
@@ -145,7 +159,26 @@ main {
   @media (max-width: 1033px) {
     padding: 20px 0;
   }
-
+  .desc-ul {
+    margin-left: 40px;
+    @media (max-width: 500px) {
+      margin-left: 20px;
+    }
+  }
+.hide_on_mob{
+  @media (max-width: 450px) {
+    opacity: 0;
+  }
+}
+  .show_on_mob{
+    display: none;
+    p{
+      color: black;
+    }
+    @media (max-width: 450px) {
+      display: block;
+    }
+  }
   .content {
     margin: 0 auto;
     max-width: 1200px;
@@ -158,17 +191,28 @@ main {
     @media (max-width: 850px) {
       max-width: 600px;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 625px) {
+      max-width: 500px;
+    }
+    @media (max-width: 500px) {
       max-width: 400px;
     }
-    @media (max-width: 460px) {
-      max-width: 250px;
+    @media (max-width: 450px) {
+      max-width: 300px;
     }
 
     h1 {
+
       font-size: 5em;
       letter-spacing: 5px;
       color: #ffff;
+      padding-top: 50px;
+      @media (max-width: 850px) {
+        font-size: 3em;
+      }
+      @media (max-width: 420px) {
+        padding: 20px;
+      }
     }
 
     .under-main-name {
@@ -181,13 +225,7 @@ main {
       text-align: left;
       text-transform: uppercase;
     }
-
     .about-txt {
-      @media (max-width: 1033px) {
-        p {
-          color: black
-        }
-      }
       color: #ffff;
 
       p {
@@ -200,10 +238,27 @@ main {
     .flex-block {
       display: flex;
       width: 100%;
-      margin-top: 50px;
+      margin-top: 20px;
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
+@media (max-width: 500px) {
+        padding: 0;
+      }
+      .txt-id {
+        padding-top: 20px;
+
+        p {
+          letter-spacing: 2px;
+
+          span {
+            color: #4adc63;
+            font-weight: bold;
+            font-family: sans-serif;
+          }
+        }
+      }
+
       @media (max-width: 850px) {
         //flex-direction: column;
         //align-items: flex-start;
@@ -269,42 +324,43 @@ ul {
   color: black;
   font-family: sans-serif;
 }
+
 .about-contact {
-        font-size: 18px;
+  font-size: 18px;
 
-        .el {
-          display: flex;
-          margin: 20px 0;
-          justify-content: flex-start;
-          align-items: center;
+  .el {
+    display: flex;
+    margin: 20px 0;
+    justify-content: flex-start;
+    align-items: center;
 
-          &:hover {
-            a {
-              color: #b9cecf;
-            }
-          }
-
-          a {
-            @media (max-width: 850px) {
-              color: black
-            }
-            color: #ffff;
-            text-transform: initial;
-            font-weight: bold;
-            letter-spacing: 2px;
-          }
-
-          span {
-            font-family: sans-serif;
-            color: #4adc63;
-            display: block;
-            margin-right: 10px;
-            letter-spacing: 2px;
-            font-weight: bold;
-
-            i {
-              font-size: 1.5em;
-            }
-          }
-        }
+    &:hover {
+      a {
+        color: #b9cecf;
       }
+    }
+
+    a {
+      @media (max-width: 850px) {
+        color: black
+      }
+      color: #ffff;
+      text-transform: initial;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    span {
+      font-family: sans-serif;
+      color: #4adc63;
+      display: block;
+      margin-right: 10px;
+      letter-spacing: 2px;
+      font-weight: bold;
+
+      i {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

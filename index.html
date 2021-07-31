@@ -5,6 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script language="JavaScript">
+      function preloader() {
+        var heavyImage = new Image();
+        heavyImage.src = "sunset.jpg";
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,500;1,100;1,300&display=swap"
@@ -15,12 +21,12 @@
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Document</title>
 </head>
-<body>
+<body onLoad="javascript:preloader()">
 <div class="bg-image"></div>
 
 <main>
     <div class="content">
-        <section>
+        <div class="first">
             <div class="txt">
                 <h1>Igor' Kim</h1>
                 <p class="under-main-name">Web engineer</p>
@@ -31,16 +37,15 @@
                     <img src="avaFinal.png" alt="igor kim">
                 </div>
 
-                <div class="about-txt">
-                    <h3 class="title">ID</h3>
-                    <p>Full name: Kim Igor' Sergeevich</p>
-                    <p>Birth: 03.02.1998 / 23 y.o</p>
-                    <p>Nation: Korean + Russian</p>
+                <div class="about-txt txt-id">
+                    <p><span>Full name:</span> Kim Igor' Sergeevich</p>
+                    <p><span>Birth: </span>03.02.1998 / 23 y.o</p>
+                    <p><span>Nation: </span>Korean + Russian</p>
                 </div>
 
 
             </div>
-            <div class="about-txt" style="margin-top: 50px">
+            <div class="about-txt hide_on_mob">
                 <h3 class="title">About</h3>
                 <p>Dedicated and efficient Front-End developer with 4+ years experience in application</p>
                 <p>Creating Client-side reactive application development using HTML / CSS / Javascript</p>
@@ -49,9 +54,17 @@
                     level"</p>
             </div>
 
-        </section>
+        </div>
         <section>
-            <div class="about-ex" style="margin-top: 100px">
+              <div class="about-txt show_on_mob" >
+                <h3 class="title">About</h3>
+                <p>Dedicated and efficient Front-End developer with 4+ years experience in application</p>
+                <p>Creating Client-side reactive application development using HTML / CSS / Javascript</p>
+                <p>Ready to Rock users desires, adapt with any team and make you're client-side more responsive. </p>
+                <p>With me you can : "Improve performance or just create a new dope things which up you to another
+                    level"</p>
+            </div>
+            <div class="about-ex">
                 <h3 class="title">Experience</h3>
                 <p>The beginning of my experience is freelance on the site fl.ru and some local amateurs wanted me to
                     fulfill their dream by creating a visual part of their products</p>
@@ -63,7 +76,7 @@
                 <li>New Castle, Delaware</li>
             </ul>
             <p class="sub-title">Key Qualifications & Responsibilities</p>
-            <ul style="list-style: disc; margin-left: 40px;">
+            <ul style="list-style: disc;" class="desc-ul">
                 <li>I got my first experience working in a large company and learned how to interact with managers,
                     back-ends, testers and designers
                 </li>
@@ -97,7 +110,7 @@
                 <li>Amsterdam</li>
             </ul>
             <p class="sub-title">Key Qualifications & Responsibilities</p>
-            <ul style="list-style: disc; margin-left: 40px;">
+            <ul style="list-style: disc;" class="desc-ul">
                 <li>
                     Responsible for the client side of the product
                 </li>
@@ -109,7 +122,7 @@
                 <li>Stack: HTML, CSS(scss), JS, VueJS, NuxtJS</li>
             </ul>
             <div>
-                <img src="box.png" alt="box" style="width: 500px; object-fit: contain; margin: 50px auto;"/>
+                <img src="box.png" alt="box"  class="ex-image"/>
             </div>
         </section>
         <section>
@@ -120,7 +133,7 @@
                 <li>Amsterdam</li>
             </ul>
             <p class="sub-title">Key Qualifications & Responsibilities</p>
-            <ul style="list-style: disc; margin-left: 40px;">
+            <ul style="list-style: disc;" class="desc-ul">
                 <li>
                     Responsible for the client side of the product
                 </li>
@@ -132,7 +145,7 @@
                 <li>Stack: HTML, CSS(scss), JS, VueJS, NuxtJS</li>
             </ul>
             <div>
-                <img src="azara.png" alt="box" style="width: 500px; object-fit: contain; margin: 50px auto;"/>
+                <img src="azara.png" alt="box"  class="ex-image"/>
             </div>
         </section>
         <section>
@@ -143,14 +156,14 @@
                 <li>Bishkek, Kyrgyzstan</li>
             </ul>
             <p class="sub-title">Key Qualifications & Responsibilities</p>
-            <ul style="list-style: disc; margin-left: 40px;">
+            <ul style="list-style: disc;" class="desc-ul">
                 <li>
                     Made breathing part for project
                 </li>
                 <li>Stack: HTML, CSS(scss), JS, Jquery</li>
             </ul>
             <div>
-                <img src="breath.png" alt="box" style="width: 500px; object-fit: contain; margin: 50px auto;"/>
+                <img src="breath.png" alt="box"  class="ex-image"/>
             </div>
         </section>
         <section>
@@ -161,7 +174,7 @@
                 <li>Saint Petersburg, Russia</li>
             </ul>
             <p class="sub-title">Key Qualifications & Responsibilities</p>
-            <ul style="list-style: disc; margin-left: 40px;">
+            <ul style="list-style: disc;" class="desc-ul">
                 <li>
                     implemented to pocketnet and used the API matrix
                     <a href="https://matrix.org/">Matrix</a>
@@ -184,16 +197,13 @@
                 <li>Stack: HTML, CSS(scss), JS-strong, VueJs, moment.js, MatrixSDK, Synapse, Docker, Lazy Load</li>
             </ul>
             <div>
-                <img src="chatMobile.png" alt="box" style="width: 500px; object-fit: contain; margin: 50px auto;"/>
-                <img src="chatDesc.png" alt="box" style="width: 500px; object-fit: contain; margin: 50px auto;"/>
+                <img src="chatMobile.png" alt="box" class="ex-image"/>
+                <img src="chatDesc.png" alt="box"  class="ex-image"/>
             </div>
         </section>
     </div>
 
 </main>
-<script type="text/javascript">
-    if(document.images)
-        (new Image()).src="sunset.jpg";
-</script>
+
 </body>
 </html>
